@@ -112,8 +112,27 @@ function doWhatItSays() {
           return console.log(err);
         }
       
-      
-        console.log(data);
+      var dataArray = data.split(",");
+        action = dataArray[0];
+        value = dataArray[1];
+        switch(action) {
+            case "my-tweets":
+                myTweets();
+                break;
+        
+            case "spotify-this-song":
+                spotifyThisSong();
+                break;
+        
+            case "movie-this":
+                movieThis();
+                break;
+            case "do-what-it-says":
+                doWhatItSays();
+        }
+        
+
+        
       
       });
       
